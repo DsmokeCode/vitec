@@ -26,7 +26,7 @@ public function guardar(){
 	$param['correo'] = $this->input->post('correo');
 	$param['cod_perfil'] = $this->input->post('cod_perfil');
 	$param['usuario'] = $this->input->post('usuario');
-	$param['pass'] = $this->input->post('pass');
+	$param['pass'] = $this->encrypt->sha1($this->input->post('pass'));
 	$param['estado_persona'] = $this->input->post('estado_persona');
 	
 	$this-> mpersona->guardar($param);
