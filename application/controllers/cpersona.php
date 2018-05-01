@@ -28,10 +28,11 @@ public function guardar(){
 	$param['usuario'] = $this->input->post('usuario');
 	$param['pass'] = $this->input->post('pass');
 	$param['estado_persona'] = $this->input->post('estado_persona');
-	$this->mpersona->guardar($param);
+	
+	$this-> mpersona->guardar($param);
+
 
 }
-
 
 
 }?>
