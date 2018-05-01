@@ -83,7 +83,7 @@ class mlogin extends CI_model
 //--------------------------------------------------------------
       $q = " SELECT codper, nomper, appper, apmper, dniper
              FROM persona
-             WHERE codper = $codpers AND  codperf = 4
+             WHERE codper = $codpers AND  codperf = 3
              ";
       $resultado = $this->db->query($q);
       $r = $resultado->row();
