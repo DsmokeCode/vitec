@@ -1,0 +1,23 @@
+git --version
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+
+git clone https://github.com/lNIkCode/EveCap.git
+
+git status //-----"ve el stado del proyecto"
+
+cls = "limpia la pantalla"
+
+git add (nombre del archivo) //------ "agrega un archivo al git"
+git add . //--------agrega todo los archivos modificados
+
+git commit -m "mensaje de cambios realizados" //---------comenta los cambios que hiciste
+
+git reset HEAD (nombrearchivo) //------- "quita del git" 
+
+git push   //------"sube el archivo al repositorio (hacerlo solo si se esta segurio de que el archivo funciona)"
+
+git pull  //-------"actualiza el archivo"
+
