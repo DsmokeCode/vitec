@@ -4,12 +4,11 @@ class mlogin extends CI_model
 {
     public function ingresar($usu, $pass)
     {
-        $this->db->select('p.codper, u.codusu, p.nomper, p.appper, p.apmper, pf.desperf');
-        $this->db->from('persona p');
-        $this->db->join('usuario u', 'p.codper = u.codper');
-        $this->db->join('perfil pf', 'p.codperf = pf.codperf');
-        $this->db->WHERE('u.userper', $usu);
-        $this->db->WHERE('u.pass', $pass);
+        $this->db->select('p.cod_persona, p.nombre, p.apellido_p, p.apellido_m, pf.descripcion_perfil');
+        $this->db->from('t02_persona p');
+        $this->db->join('t08_perfil pf', 'p.cod_perfil = pf.cod_perfil');
+        $this->db->WHERE('p.usuario', $usu);
+        $this->db->WHERE('p.contraseña', $pass);
 
         $resultado = $this->db->get();
         if ($resultado-> num_rows() == 1) {
