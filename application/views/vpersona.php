@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>form</h1>
-	<form action="cpersona/guardar">
+	<form action="<?php echo base_url();?>cpersona/guardar" method="POST">
 		<label for="dni">dni</label>
 		<input type="text" name="dni">
 		</br>
@@ -23,7 +23,7 @@
 		<input type="text" name="direccion">
 		</br>
 		<label for="fecha_ingreso">fecha_ingreso</label>
-		<input type="text" name="fecha_ingreso">
+		<input type="date" name="fecha_ingreso">
 		</br>
 		<label for="celular">celular</label>
 		<input type="text" name="celular">
@@ -31,11 +31,8 @@
 		<label for="telefono">telefono</label>
 		<input type="text" name="telefono">
 		</br>
-		<label for="fecha_ingreso">fecha_ingreso</label>
-		<input type="text" name="fecha_ingreso">
-		</br>
 		<label for="correo">correo</label>
-		<input type="text" name="correo">
+		<input type="email" name="correo">
 		</br>
 		<label for="cod_perfil">cod_perfil</label>
 		<input type="text" name="cod_perfil">
@@ -44,10 +41,11 @@
 		<input type="text" name="usuario">
 		</br>
 		<label for="pass">pass</label>
-		<input type="text" name="pass">
+		<input type="password" name="pass">
 		</br>
 		<label for="estado_persona">estado_persona</label>
 		<input type="text" name="estado_persona">
+		</br>
 		<input type="submit" value="guardar">
 	</form>
 </body>
