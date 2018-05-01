@@ -8,16 +8,16 @@ class mlogin extends CI_model
         $this->db->from('t02_persona p');
         $this->db->join('t08_perfil pf', 'p.cod_perfil = pf.cod_perfil');
         $this->db->WHERE('p.usuario', $usu);
-        $this->db->WHERE('p.contraseña', $pass);
+        $this->db->WHERE('p.pass', $pass);
 
         $resultado = $this->db->get();
         if ($resultado-> num_rows() == 1) {
             $r         = $resultado-> row();
             $s_usuario = array(
-                's_codper'  => $r->codper,
-                's_codusu'  => $r->codusu,
-                's_usuario' => $r->nomper." ".$r->appper,
-                's_perfil'  => $r->desperf
+                's_cod_persona'  => $r->cod_persona,
+                's_usuario1' => $r->usuario,
+                's_usuario' => $r->nombre." ".$r->apellido_p,
+                's_perfil'  => $r->descripcion_perfil
                 );
 
             $this->session->set_userdata($s_usuario);
