@@ -22,7 +22,10 @@ public function ingresar(){
 	$res = $this->mlogin->ingresar($usuario,$pass);
 
 	if ($res == 1) {
+		$this->load->view('layout/header');
+		$this->load->view('layout/menu');
 		$this->load->view('vprincipal');
+		$this->load->view('layout/footer');
 	} else {
 		$data['mensaje'] ="Usuario o Contraseña Erronea";
 		$this->load->view('vlogin',$data);
