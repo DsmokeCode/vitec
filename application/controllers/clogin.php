@@ -24,7 +24,7 @@ public function ingresar(){
 	if ($res == 1) {
 		$this->load->view('vprincipal');
 	} else {
-		$data['mensaje'] ="usuario";
+		$data['mensaje'] ="Usuario o Contraseña Erronea";
 		$this->load->view('vlogin',$data);
 	}
 	
