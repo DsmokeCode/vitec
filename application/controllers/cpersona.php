@@ -30,6 +30,14 @@ public function guardar(){
 	$param['usuario'] = $this->input->post('usuario');
 	$param['pass'] = sha1($this->input->post('pass'));
 	$param['estado_persona'] = $this->input->post('estado_persona');
-	$this->mpersona->guardar($param);
+	$this->mpersona->guardar($param);	
+}
+public function actualizar(){
+	$param['nombre'] = $this->input->post('nombre');
+	$param['apellido_p'] = $this->input->post('apellido_p');
+	$param['apellido_m'] = $this->input->post('apellido_m');
+	$this->mpersona->actualizar($param);
+	$this->load->view('vprincipal');
+
 }
 }?>

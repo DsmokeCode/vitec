@@ -1,16 +1,32 @@
-<?php 
+<?php
 /**
  * 
  */
- class Clogin extends CI_Controller
- {
+class Clogin extends CI_Controller
+{
  	
- 	function __construct()
- 	{
- 		parent::__construct();
- 	}
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->model('mlogin');
+	}
 
 public function index(){
-	$this->load->view('vlogin');
- } 
- }?>
+	$data['mensaje'] ="";
+	$this->load->view('vlogin',$data);
+}
+public function ingresar(){
+	$usuario = $this->input->post('usuario');
+	$pass = sha1($this->input->post('pass'));
+
+	$res = $this->mlogin->ingresar($usuario,$pass);
+
+	if ($res == 1) {
+		$this->load->view('vprincipal');
+	} else {
+		$data['mensaje'] ="usuario";
+		$this->load->view('vlogin',$data);
+	}
+	
+}
+}?>

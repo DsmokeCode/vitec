@@ -48,5 +48,6 @@
 		</br>
 		<input type="submit" value="guardar">
 	</form>
+	<a href="<?php echo base_url();?>clogin">Logear</a>
 </body>
 </html>
