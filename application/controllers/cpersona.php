@@ -31,9 +31,5 @@ public function guardar(){
 	$param['pass'] = sha1($this->input->post('pass'));
 	$param['estado_persona'] = $this->input->post('estado_persona');
 	$this->mpersona->guardar($param);
-
 }
-
-
-
 }?>
