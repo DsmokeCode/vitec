@@ -1,15 +1,14 @@
 </div>
-  <!-- /.content-wrapper -->
-
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  </footer>
-  
-  </div>
+<!-- /.content-wrapper -->
+<footer class="main-footer">
+<div class="pull-right hidden-xs">
+  <b>Version</b> 1.0
+</div>
+<strong>Copyright &copy; 2018 <a href="https://adminlte.io">Sistema Vitec</a>.</strong> Todo los Derechos
+reservados.
+</footer>
+<div class="control-sidebar-bg"></div>
+</div>
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->

@@ -15,6 +15,7 @@ public function index(){
 	$data['mensaje'] ="";
 	$this->load->view('vlogin',$data);
 }
+
 public function ingresar(){
 	$usuario = $this->input->post('usuario');
 	$pass = sha1($this->input->post('pass'));
