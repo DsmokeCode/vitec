@@ -37,7 +37,10 @@ public function actualizar(){
 	$param['apellido_p'] = $this->input->post('apellido_p');
 	$param['apellido_m'] = $this->input->post('apellido_m');
 	$this->mpersona->actualizar($param);
-	$this->load->view('vprincipal');
+		$this->load->view('layout/header');
+		$this->load->view('layout/menu');
+		$this->load->view('vprincipal');
+		$this->load->view('layout/footer');
 
 }
 }?>
