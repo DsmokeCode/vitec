@@ -1,7 +1,5 @@
 <?php
-/**
- * 
- */
+
 class Clogin extends CI_Controller
 {
  	
@@ -14,7 +12,7 @@ class Clogin extends CI_Controller
 public function index(){
 	$data['mensaje'] ="";
 	$this->load->view('vlogin',$data);
-}
+	}
 
 public function ingresar(){
 	$usuario = $this->input->post('usuario');

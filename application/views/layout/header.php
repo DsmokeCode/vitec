@@ -257,7 +257,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?php echo base_url();?>assets/dist/img/vitec.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs"><?php echo $this->session->userdata('s_nombre'); ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -265,7 +265,7 @@
                 <img src="<?php echo base_url();?>assets/dist/img/vitec.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                   - 
+                  <?php echo $this->session->userdata('s_nombre'); ?> - 
                   <?php echo $this->session->userdata('s_perfil'); ?>
                   <small>Bienvenido a VITEC</small>
                 </p>

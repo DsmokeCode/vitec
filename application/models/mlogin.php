@@ -1,7 +1,5 @@
 <?php
-/**
-* 
-*/
+
 class Mlogin extends CI_Model
 {
 	
